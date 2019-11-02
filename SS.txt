@@ -15,5 +15,5 @@ runcmd:
 
   - curl -sSL https://get.docker.com/ | sh
   - usermod -aG docker chengzh
-  - docker run -dt --name ss -p 443:6443 mritd/shadowsocks -s "-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k 2wsx#EDC"
+  - docker run -dt --name ss  --restart always -p 443:6443 mritd/shadowsocks -s "-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k 2wsx#EDC"
 
